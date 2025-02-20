@@ -9,6 +9,11 @@
     # pkgs.go
     pkgs.go_1_23
     pkgs.neovim
+    pkgs.air
+    pkgs.sqlite
+    pkgs.gcc
+    # pkgs
+
     # pkgs.python311
     # pkgs.python311Packages.pip
     # pkgs.nodejs_20
@@ -21,6 +26,7 @@
     # Search for the extensions you want on https://open-vsx.org/ and use "publisher.id"
     extensions = [
       # "vscodevim.vim"
+      "PKief.material-icon-theme"
     ];
 
     # Enable previews
