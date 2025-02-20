@@ -2,12 +2,26 @@ package utils
 
 import (
 	"errors"
+	"log"
+	"os"
 	"time"
 
 	"github.com/golang-jwt/jwt/v5"
+	"github.com/joho/godotenv"
 )
 
-var secretKey = []byte("supersecretkey")
+var secretKey []byte
+
+func init() {
+	// Load environment variables from .env file
+	err := godotenv.Load()
+	if err != nil {
+		log.Println("No .env file found, using system env variables.")
+	}
+
+	// Get secret key from environment
+	secretKey = []byte(os.Getenv("JWT_SECRET"))
+}
 
 type Claims struct {
 	Username string `json:"username"`
