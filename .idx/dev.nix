@@ -12,6 +12,9 @@
     pkgs.air
     pkgs.sqlite
     pkgs.gcc
+    # pkgs.nasm  # Netwide Assembler for x86
+    # pkgs.gcc   # GNU Compiler Collection
+    # pkgs.make
     # pkgs
 
     # pkgs.python311
